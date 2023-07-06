@@ -1,3 +1,38 @@
+
+
+
+
+## Install shopware64 local with ddev
+https://ddev.readthedocs.io/en/latest/
+
+git clone https://github.com/lme-adesso/ddev-shopware64
+
+# Commands after cloning:
+
+1. ddev start -y
+2. ddev composer install
+3. in .env URL anpassen auf: APP_URL="https://radeberger.adesso.localhost"
+4. ddev exec bin/console system:setup --database-url=mysql://db:db@db:3306/db --app-url='https://raderberger.adesso.localhost'
+5. ddev exec bin/console system:install --create-database --basic-setup --force
+6. ddev php bin/console cache:clear
+7. ddev ssh 
+8. mkdir custom/plugins
+
+# Go to:
+http://adesso-shopware.local
+
+# Switch to docker container:
+
+ddev ssh
+
+# Use bin/console:
+
+ddev php bin/console
+
+
+
+
+
 # Shopware 6 production template
 
 This repository contains the production template that enables you to build,
