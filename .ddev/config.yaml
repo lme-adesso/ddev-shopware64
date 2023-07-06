@@ -1,4 +1,4 @@
-name: radeberger.adesso
+name: shopware64
 type: shopware6
 docroot: public
 php_version: "8.0"
@@ -7,7 +7,7 @@ router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames: []
-additional_fqdns: ["radeberger.adesso.localhost"]
+additional_fqdns: ["shopware64.adesso.localhost"]
 database:
     type: mariadb
     version: "10.4"

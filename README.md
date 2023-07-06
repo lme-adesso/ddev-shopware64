@@ -10,16 +10,14 @@ git clone https://github.com/lme-adesso/ddev-shopware64
 # Commands after cloning:
 
 1. ddev start -y
-2. ddev composer install
-3. in .env URL anpassen auf: APP_URL="https://radeberger.adesso.localhost"
-4. ddev exec bin/console system:setup --database-url=mysql://db:db@db:3306/db --app-url='https://raderberger.adesso.localhost'
+2. ddev composer install --no-scripts
+3. ddev exec bin/console system:setup --database-url=mysql://db:db@db:3306/db --app-url='https://shopware64.adesso.localhost'
+4. Application Environment dev (1), Database Host, User, Pw, DB Name "db" angeben,  Write into "/var/www/html/.env"? - yes angeben
 5. ddev exec bin/console system:install --create-database --basic-setup --force
 6. ddev php bin/console cache:clear
-7. ddev ssh 
-8. mkdir custom/plugins
 
 # Go to:
-http://adesso-shopware.local
+https://shopware64.adesso.localhost
 
 # Switch to docker container:
 
